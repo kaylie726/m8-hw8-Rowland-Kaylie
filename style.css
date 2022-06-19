@@ -39,12 +39,40 @@ header {
 header a {
   font-size: 1.5rem;
   color: var(--off-white);
+  text-decoration: none;
+}
+
+@keyframes HeaderLinks {
+  0% {background-color: violet;}
+  10% {background-color: indigo;}
+  20% {background-color: blue;}
+  30% {background-color: green;}
+  40% {background-color: yellow;}
+  50% {background-color: orange;}
+  60% {background-color: red;}
+  70% {background-color: brown;}
+  80% {background-color: gray;}
+  90% {background-color: black;}
+  100% {background-color: lightpink;}
+}
+
+header a:hover {
+  color: white;
+  animation-name: HeaderLinks;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
 /* end header link animations */
 
 /* article link transitions */
 main a {
   color: var(--danger-color);
+  transition: 250ms linear;
+}
+
+main a:hover {
+  color: white;
+  background-color: darkred;
 }
 /* end article link transitions */
 
@@ -100,6 +128,12 @@ section.hero > button {
   border-radius: 12px;
   text-transform: uppercase;
   cursor: pointer;
+  transition: 500ms linear;
+}
+
+section.hero > button:hover {
+  background-color: darkred;
+  color: black;
 }
 
 main article {
